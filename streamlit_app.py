@@ -39,15 +39,12 @@ def get_fruity_vice_data(this_fruit_choice):
     return fruityvice_normalized
 
 try:
-  fruit_choice = streamlit.text_input('What fruit would you lidef get_fruity_vice_data(this_fruit_choice):
-    fruit_choice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-    return fruityvice_normalizedke information about?')
-  if not fruit_choice:
-    streamlit.error("Please input choice of fruit")
-  else:
-    back_from_function=get_fruity_vice_data(fruit_choice)
-    streamlit.dataframe(back_from_function)
+    fruit_choice = streamlit.text_input('What fruit would you like information about?')
+    if not fruit_choice:
+        streamlit.error("Please input choice of fruit")
+    else:
+        back_from_function=get_fruity_vice_data(fruit_choice)
+        streamlit.dataframe(back_from_function)
 except URLError as e:
   streamlit.error()
   
