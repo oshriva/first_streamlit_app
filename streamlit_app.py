@@ -32,7 +32,6 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header("Fruityvice Fruit Advice!")
 #streamlit.text(fruityvice_response.json())
 
-
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
 
@@ -50,4 +49,4 @@ streamlit.dataframe(my_data_row)
 fruit_choice2 = streamlit.text_input('What fruit would you like information about?','Jackfruit')
 streamlit.write('Thanks for chooseing ', fruit_choice2)
 
-
+mycur.execute ("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values("From Streamlit") )
