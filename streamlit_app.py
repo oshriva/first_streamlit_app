@@ -2,6 +2,7 @@ import streamlit
 import pandas
 import requests
 import snowflake.connector
+from urllib.error import URLError
 
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
